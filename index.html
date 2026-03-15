@@ -3,50 +3,587 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Oren</title>
+  <title>אורן קדוש – איפור ועיצוב שיער לכלות</title>
+  <meta name="description" content="אורן קדוש – מאפרת ומסרקת כלות מקצועית. התמחות בסגנון בוהו כפרי רומנטי, שזירת פרחים בתסרוקת ואיפור עדין וטבעי.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="אורן קדוש – איפור ועיצוב שיער לכלות">
+  <meta property="og:description" content="מאפרת ומסרקת כלות מקצועית. סגנון בוהו כפרי רומנטי, איפור עדין וטבעי.">
+  <meta property="og:locale" content="he_IL">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <h1>Oren</h1>
-      <ul>
+  <!-- ===================================================
+       HEADER
+       =================================================== -->
+  <header id="header">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="לוגו.JPG" alt="אורן קדוש – מאפרת ומסרקת כלות">
+      </a>
+      <ul class="nav-links">
         <li><a href="#about">אודות</a></li>
         <li><a href="#services">שירותים</a></li>
-        <li><a href="#contact">צור קשר</a></li>
+        <li><a href="#gallery">גלריה</a></li>
+        <li><a href="#testimonials">המלצות</a></li>
+        <li><a href="#contact" class="nav-cta">לתיאום פגישה</a></li>
       </ul>
+      <button class="hamburger" id="hamburger" aria-label="פתח תפריט">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#about" class="mobile-link">אודות</a></li>
+        <li><a href="#services" class="mobile-link">שירותים</a></li>
+        <li><a href="#gallery" class="mobile-link">גלריה</a></li>
+        <li><a href="#testimonials" class="mobile-link">המלצות</a></li>
+        <li><a href="#contact" class="mobile-link">לתיאום פגישה</a></li>
+      </ul>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>ברוכים הבאים</h2>
-    <p>כאן תוכל לכתוב משפט קצר שמתאר אותך או את העסק שלך</p>
-    <a href="#contact" class="btn">צור קשר</a>
-  </section>
 
-  <section id="about">
-    <h2>אודות</h2>
-    <p>כאן תכתוב קצת על עצמך</p>
-  </section>
+  <!-- ===================================================
+       HERO
+       =================================================== -->
+  <section class="hero" id="hero">
 
-  <section id="services">
-    <h2>שירותים</h2>
-    <div class="cards">
-      <div class="card">שירות 1</div>
-      <div class="card">שירות 2</div>
-      <div class="card">שירות 3</div>
+    <!-- פרח עליון ימין -->
+    <div class="hero-floral hero-floral--tl" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M100 20 C80 20, 30 40, 20 80 C10 120, 40 160, 80 170 C120 180, 170 150, 175 110 C180 70, 160 25, 100 20Z" stroke="#C9A96E" stroke-width="1.5" fill="rgba(201,169,110,0.06)"/>
+        <path d="M60 60 Q100 30 140 60 Q170 90 140 130 Q110 160 70 145 Q30 130 30 95 Q30 70 60 60Z" stroke="#C9A0A0" stroke-width="1" fill="rgba(201,160,160,0.05)"/>
+        <circle cx="100" cy="100" r="8" fill="rgba(201,169,110,0.3)"/>
+        <path d="M100 100 L100 30" stroke="#9BAF98" stroke-width="1" opacity="0.6"/>
+        <path d="M100 100 L155 70" stroke="#9BAF98" stroke-width="1" opacity="0.5"/>
+        <path d="M100 100 L160 130" stroke="#9BAF98" stroke-width="1" opacity="0.5"/>
+        <path d="M100 100 L60 160" stroke="#9BAF98" stroke-width="1" opacity="0.4"/>
+        <!-- Small flowers -->
+        <circle cx="100" cy="30" r="5" fill="rgba(201,160,160,0.5)"/>
+        <circle cx="155" cy="70" r="4" fill="rgba(201,169,110,0.4)"/>
+        <circle cx="160" cy="130" r="5" fill="rgba(201,160,160,0.45)"/>
+        <circle cx="60" cy="160" r="4" fill="rgba(201,169,110,0.35)"/>
+        <!-- Leaves -->
+        <ellipse cx="80" cy="65" rx="10" ry="5" transform="rotate(-30 80 65)" fill="rgba(155,175,152,0.4)"/>
+        <ellipse cx="130" cy="55" rx="10" ry="5" transform="rotate(20 130 55)" fill="rgba(155,175,152,0.35)"/>
+        <ellipse cx="140" cy="145" rx="9" ry="4" transform="rotate(-15 140 145)" fill="rgba(155,175,152,0.4)"/>
+      </svg>
+    </div>
+
+    <!-- פרח תחתון שמאל -->
+    <div class="hero-floral hero-floral--br" aria-hidden="true">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 150 Q80 80 150 60" stroke="#9BAF98" stroke-width="1.5" fill="none" opacity="0.7"/>
+        <path d="M50 150 Q60 100 120 80" stroke="#9BAF98" stroke-width="1" fill="none" opacity="0.5"/>
+        <circle cx="150" cy="60" r="7" fill="rgba(201,160,160,0.6)"/>
+        <circle cx="120" cy="80" r="5" fill="rgba(201,169,110,0.5)"/>
+        <circle cx="90" cy="110" r="4" fill="rgba(201,160,160,0.4)"/>
+        <ellipse cx="75" cy="125" rx="12" ry="6" transform="rotate(-40 75 125)" fill="rgba(155,175,152,0.45)"/>
+        <ellipse cx="110" cy="95" rx="10" ry="5" transform="rotate(10 110 95)" fill="rgba(155,175,152,0.4)"/>
+        <ellipse cx="140" cy="75" rx="11" ry="5" transform="rotate(-20 140 75)" fill="rgba(155,175,152,0.35)"/>
+      </svg>
+    </div>
+
+    <div class="hero-content reveal">
+      <span class="hero-script">bridal beauty</span>
+      <h1>אורן קדוש</h1>
+      <p class="hero-tagline">מאפרת ומסרקת כלות · סגנון בוהו כפרי רומנטי</p>
+      <div class="hero-divider">
+        <span></span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" color="#C9A96E">
+          <path d="M12 2C9.5 2 7 4 7 7C7 9.5 8.5 11.5 10.5 12.5C8 13.5 6 16 6 19H8C8 16.8 9.8 15 12 15S16 16.8 16 19H18C18 16 16 13.5 13.5 12.5C15.5 11.5 17 9.5 17 7C17 4 14.5 2 12 2ZM12 4C13.7 4 15 5.3 15 7C15 8.7 13.7 10 12 10C10.3 10 9 8.7 9 7C9 5.3 10.3 4 12 4Z"/>
+        </svg>
+        <span></span>
+      </div>
+      <div class="hero-buttons">
+        <a href="#gallery" class="btn btn--outline">לגלריה שלי</a>
+        <a href="#contact" class="btn btn--gold">לתיאום פגישה ✦</a>
+      </div>
     </div>
   </section>
 
-  <section id="contact">
-    <h2>צור קשר</h2>
-    <p>shimikadosh@gmail.com</p>
+
+  <!-- ===================================================
+       ABOUT
+       =================================================== -->
+  <section id="about">
+    <div class="about-grid">
+
+      <div class="about-image-wrap reveal">
+        <img src="PORTRET/IMG_0912.JPG" alt="אורן קדוש – מאפרת ומסרקת כלות">
+      </div>
+
+      <div class="about-text">
+        <div class="section-header reveal">
+          <span class="section-label">about me</span>
+          <h2 class="section-title">אודות אורן</h2>
+          <div class="section-divider">
+            <span></span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2l1.5 4.5H18l-3.75 2.7 1.5 4.5L12 11.1l-3.75 2.6 1.5-4.5L6 6.5h4.5z"/></svg>
+            <span></span>
+          </div>
+        </div>
+
+        <p class="reveal reveal-delay-1">
+          נעים מאוד 🙂 אני אורן קדוש, מאפרת ומסרקת כלות מזה 10 שנים.
+          אני מתמחה בסגנון בוהו כפרי ורומנטי שמתבטא בתסרוקות במראה כפרי ופייתי בשילוב של שזירות פרחים יבשים — ובמראה מיוחד שלא תראי בכל מקום.
+        </p>
+        <p class="reveal reveal-delay-2">
+          אני מאפרת בסגנון עדין שמדגיש את היופי שלך וגורם לך להרגיש חגיגית ומוארת — אבל את!
+          עבורי כל כלה היא עולם ומלואו, ואני כאן כדי להגשים לך את חלום יום החתונה שלך — שתרגישי את עצמך הכי יפה, נינוחה ומיוחדת.
+        </p>
+
+        <div class="about-highlights reveal reveal-delay-3">
+          <div class="about-highlight">
+            <div class="about-highlight-icon">🌸</div>
+            <span>10 שנות ניסיון באיפור כלות</span>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-icon">💐</div>
+            <span>התמחות בשזירת פרחים בתסרוקת</span>
+          </div>
+          <div class="about-highlight">
+            <div class="about-highlight-icon">✨</div>
+            <span>ליווי מקצועי מפגישת הניסיון ועד לאולם</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
+
+  <!-- ===================================================
+       SERVICES
+       =================================================== -->
+  <section id="services">
+    <div class="section-header reveal">
+      <span class="section-label">what I offer</span>
+      <h2 class="section-title">השירותים שלי</h2>
+      <div class="section-divider">
+        <span></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2l1.5 4.5H18l-3.75 2.7 1.5 4.5L12 11.1l-3.75 2.6 1.5-4.5L6 6.5h4.5z"/></svg>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-icon">💄</div>
+        <h3>איפור כלה</h3>
+        <!-- ✏️ להחליף: תיאור ומחיר אמיתי -->
+        <p>איפור עדין וטבעי שמחמיא לפנים ומותאם אישית לסגנון הכלה. עמיד לאורך כל שמחת החתונה.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-icon">🌿</div>
+        <h3>עיצוב שיער כלה</h3>
+        <!-- ✏️ להחליף: תיאור אמיתי -->
+        <p>תסרוקות בוהו כפריות עם שזירת פרחים טריים או מיובשים. כל תסרוקת מעוצבת בנשימה ובנגיעה רכה.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-icon">🚗</div>
+        <h3>ליווי לאולם</h3>
+        <!-- ✏️ להחליף: תיאור אמיתי -->
+        <p>אני מגיעה איתך לאולם ונשארת לאורך כל הערב לתגבורים, תיקונים ושמירה על המראה המושלם.</p>
+      </div>
+
+      <div class="service-card reveal reveal-delay-4">
+        <div class="service-icon">🪞</div>
+        <h3>פגישת ניסיון</h3>
+        <!-- ✏️ להחליף: תיאור אמיתי -->
+        <p>פגישה אישית לפני החתונה לבניית הלוק המדויק. נתנסה, נתאים ונוודא שביום הגדול הכל מושלם.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       GALLERY
+       =================================================== -->
+  <section id="gallery">
+    <div class="section-header reveal">
+      <span class="section-label">my work</span>
+      <h2 class="section-title">גלריית עבודות</h2>
+      <div class="section-divider">
+        <span></span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2l1.5 4.5H18l-3.75 2.7 1.5 4.5L12 11.1l-3.75 2.6 1.5-4.5L6 6.5h4.5z"/></svg>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="gallery-grid">
+
+      <div class="gallery-item gallery-item--tall reveal">
+        <img src="GALLERY/1D6187B7-1CF4-4824-9F0D-E41B9DC43C49.JPG" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="GALLERY/4D61DF6F-DB55-402D-83BF-F3403878FA62.jpg" alt="עיצוב שיער כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="GALLERY/38A6E1F5-EC56-4439-AF52-5D63F7388793.jpg" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="GALLERY/עותק של 31377BDD-2511-4DC1-B14C-6FEF72992B6B.jpg" alt="תסרוקת כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item gallery-item--wide reveal reveal-delay-2">
+        <img src="GALLERY/A93A1EF0-547E-4780-92F6-5B04B6FA10A0.JPG" alt="איפור ושיער כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item gallery-item--tall reveal">
+        <img src="GALLERY/עיצוב ללא שם (21).png" alt="עיצוב שיער עם פרחים" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="GALLERY/A7852C23-B040-461D-B404-7D0AD6E98AB3.png" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="GALLERY/E53437B2-915B-4810-A9D9-A826902FCD60.JPG" alt="תסרוקת כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3">
+        <img src="GALLERY/Facelab 2025-02-16 08-23-41.jpeg" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="GALLERY/Facelab 2025-03-22 07-27-06.jpeg" alt="עיצוב שיער" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="GALLERY/Facelab 2025-04-29 08-35-08.jpg" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3">
+        <img src="GALLERY/Facelab 2025-04-01 10-07-00.JPEG" alt="תסרוקת כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item gallery-item--tall reveal">
+        <img src="GALLERY/Facelab 2025-03-23 07-48-35.JPEG" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="GALLERY/Facelab 2025-08-28 04-29-11.JPEG" alt="עיצוב שיער עם פרחים" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="GALLERY/Facelab 2025-07-03 07-32-47.jpeg" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3">
+        <img src="GALLERY/Facelab 2025-05-26 07-05-40.JPEG" alt="תסרוקת כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="GALLERY/Facelab 2025-08-28 05-10-54.JPEG" alt="איפור ושיער כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="GALLERY/Facelab 2025-09-20 08-13-29.jpeg" alt="עיצוב שיער" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item gallery-item--wide reveal reveal-delay-3">
+        <img src="GALLERY/Facelab 2025-11-01 08-37-51.jpeg" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="GALLERY/IMG_0228.JPG" alt="תסרוקת כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="GALLERY/IMG_0226.JPG" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3">
+        <img src="GALLERY/IMG_00722.jpg" alt="עיצוב שיער עם פרחים" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="GALLERY/IMG_1242.JPG" alt="איפור כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-2">
+        <img src="GALLERY/IMG_1365.JPG" alt="תסרוקת כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-3">
+        <img src="GALLERY/IMG_1366.JPG" alt="איפור ושיער כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+      <div class="gallery-item reveal reveal-delay-1">
+        <img src="GALLERY/IMG_4017.JPG" alt="עיצוב שיער כלה" loading="lazy">
+        <div class="gallery-overlay"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       TESTIMONIALS
+       =================================================== -->
+  <section id="testimonials">
+    <div class="testimonials-inner">
+
+      <div class="section-header reveal">
+        <span class="section-label">happy brides</span>
+        <h2 class="section-title">מה הכלות אומרות</h2>
+        <div class="section-divider">
+          <span></span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2l1.5 4.5H18l-3.75 2.7 1.5 4.5L12 11.1l-3.75 2.6 1.5-4.5L6 6.5h4.5z"/></svg>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card reveal reveal-delay-1">
+          <div class="testimonial-quote-icon">"</div>
+          <!-- ✏️ להחליף: המלצה אמיתית -->
+          <p>אורן פשוט קסומה! היא הבינה בדיוק מה רציתי — משהו טבעי, עדין ורומנטי. יצאתי מהפגישה עם דמעות מרוב שמחה. ביום החתונה הייתי מושלמת!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">🌸</div>
+            <div>
+              <!-- ✏️ להחליף: שם הכלה ושנה -->
+              <div class="testimonial-name">שם הכלה</div>
+              <div class="testimonial-date">כלה, חתונה XXXX</div>
+              <div class="testimonial-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-2">
+          <div class="testimonial-quote-icon">"</div>
+          <!-- ✏️ להחליף: המלצה אמיתית -->
+          <p>תסרוקת הפרחים שאורן עשתה לי הייתה הדבר הכי יפה שראיתי. כולם שאלו אותי מי עשה לי את השיער. מקצועית, סבלנית ומהנה לעבוד איתה!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">💐</div>
+            <div>
+              <!-- ✏️ להחליף: שם הכלה ושנה -->
+              <div class="testimonial-name">שם הכלה</div>
+              <div class="testimonial-date">כלה, חתונה XXXX</div>
+              <div class="testimonial-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card reveal reveal-delay-3">
+          <div class="testimonial-quote-icon">"</div>
+          <!-- ✏️ להחליף: המלצה אמיתית -->
+          <p>מהפגישת הניסיון ועד לאולם — אורן הייתה נוכחת, רגועה ומדהימה. היא נתנה לי ביטחון אמיתי. האיפור החזיק כל הלילה ונראה טוב בכל תמונה!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">✨</div>
+            <div>
+              <!-- ✏️ להחליף: שם הכלה ושנה -->
+              <div class="testimonial-name">שם הכלה</div>
+              <div class="testimonial-date">כלה, חתונה XXXX</div>
+              <div class="testimonial-stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       CONTACT
+       =================================================== -->
+  <section id="contact">
+
+    <div class="contact-grid">
+
+      <!-- Info -->
+      <div class="contact-info">
+        <div class="section-header reveal">
+          <span class="section-label">let's connect</span>
+          <h2 class="section-title">בואי נדבר</h2>
+          <div class="section-divider">
+            <span></span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A96E"><path d="M12 2l1.5 4.5H18l-3.75 2.7 1.5 4.5L12 11.1l-3.75 2.6 1.5-4.5L6 6.5h4.5z"/></svg>
+            <span></span>
+          </div>
+        </div>
+
+        <p class="reveal reveal-delay-1">
+          שמחה לשמוע ממך! ניתן לשלוח הודעה דרך הטופס, לכתוב לי באינסטגרם, או לשלוח ווצאפ.
+          אשוב אלייך בהקדם האפשרי 💌
+        </p>
+
+        <div class="contact-links">
+
+          <!-- ✏️ להחליף: @your.instagram.handle -->
+          <a href="https://www.instagram.com/orenkadosh_hair_makeup/" target="_blank" rel="noopener" class="contact-link reveal reveal-delay-2">
+            <div class="contact-link-icon contact-link-icon--ig">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </div>
+            <div>
+              <div>אינסטגרם</div>
+              <!-- ✏️ להחליף: @your.instagram -->
+              <div style="font-size:0.82rem; opacity:0.65; font-weight:400;">@orenkadosh_hair_makeup</div>
+            </div>
+          </a>
+
+          <!-- ✏️ להחליף: 972XXXXXXXXX → מספר הווצאפ שלך -->
+          <a href="https://wa.me/972585397397?text=היי אורן! ראיתי את האתר שלך ורציתי לתאם פגישה 🌸" target="_blank" rel="noopener" class="contact-link reveal reveal-delay-3">
+            <div class="contact-link-icon contact-link-icon--wa">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <div>ווצאפ</div>
+              <div style="font-size:0.82rem; opacity:0.65; font-weight:400;">שלחי הודעה</div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form-wrap reveal reveal-delay-2">
+        <h3>השאירי פרטים ואחזור אלייך 💌</h3>
+        <!-- ✏️ אופציה: להחליף action="..." ל-Formspree endpoint -->
+        <form action="mailto:shimikadosh@gmail.com" method="POST" enctype="text/plain">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">שם מלא *</label>
+              <input type="text" id="name" name="שם" placeholder="שמך המלא" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">טלפון *</label>
+              <input type="tel" id="phone" name="טלפון" placeholder="05X-XXX-XXXX" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="wedding-date">תאריך החתונה המשוער</label>
+            <input type="date" id="wedding-date" name="תאריך חתונה">
+          </div>
+
+          <div class="form-group">
+            <label for="service">שירות מבוקש</label>
+            <select id="service" name="שירות">
+              <option value="">— בחרי שירות —</option>
+              <option value="makeup">איפור כלה</option>
+              <option value="hair">עיצוב שיער כלה</option>
+              <option value="package">חבילה</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">הודעה</label>
+            <textarea id="message" name="הודעה" placeholder="ספרי לי קצת על החתונה שלך, הסגנון שאת חושבת עליו..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">שלחי הודעה ✦</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================================================
+       FOOTER
+       =================================================== -->
   <footer>
-    <p>© 2026 Oren. כל הזכויות שמורות.</p>
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-logo">
+          <img src="לוגו.JPG" alt="אורן קדוש">
+        </div>
+
+        <div class="footer-tagline">with love, Oren</div>
+
+        <div class="footer-social">
+          <!-- ✏️ להחליף: href לפרופיל האינסטגרם שלך -->
+          <a href="https://www.instagram.com/orenkadosh_hair_makeup/" target="_blank" rel="noopener" aria-label="אינסטגרם">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <!-- ✏️ להחליף: href לווצאפ שלך -->
+          <a href="https://wa.me/972585397397" target="_blank" rel="noopener" aria-label="ווצאפ">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 אורן קדוש · כל הזכויות שמורות</p>
+      </div>
+    </div>
   </footer>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="תמונה מוגדלת">
+    <button class="lightbox-close" id="lightboxClose" aria-label="סגור">✕</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="הקודמת">‹</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="הבאה">›</button>
+    <div class="lightbox-img-wrap">
+      <img id="lightboxImg" src="" alt="">
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "אורן קדוש – איפור ועיצוב שיער לכלות",
+    "description": "מאפרת ומסרקת כלות מקצועית, התמחות בסגנון בוהו כפרי רומנטי",
+    "image": "לוגו.JPG",
+    "priceRange": "₪₪",
+    "sameAs": [
+      "https://www.instagram.com/orenkadosh_hair_makeup/"
+    ]
+  }
+  </script>
 
 </body>
 </html>
