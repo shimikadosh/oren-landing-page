@@ -103,6 +103,41 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft')   showNext();
 });
 
+// ---------- CONTACT FORM (Formspree) ----------
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+const formSubmitBtn = document.getElementById('formSubmitBtn');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    formSubmitBtn.disabled = true;
+    formSubmitBtn.textContent = 'שולחת...';
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (response.ok) {
+        contactForm.reset();
+        contactForm.style.display = 'none';
+        formSuccess.style.display = 'block';
+      } else {
+        formSubmitBtn.disabled = false;
+        formSubmitBtn.textContent = 'שלחי הודעה ✦';
+        alert('אירעה שגיאה. אנא נסי שוב או פני אלינו בווצאפ.');
+      }
+    } catch {
+      formSubmitBtn.disabled = false;
+      formSubmitBtn.textContent = 'שלחי הודעה ✦';
+      alert('אירעה שגיאה. אנא בדקי את החיבור לאינטרנט.');
+    }
+  });
+}
+
 // ---------- ACTIVE NAV LINK ----------
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
